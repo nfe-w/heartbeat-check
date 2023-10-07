@@ -1,0 +1,1 @@
+curl http://xxx.xxx.xxx.xxx:7777/heartbeat
