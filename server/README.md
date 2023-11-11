@@ -4,7 +4,7 @@ docker build -t nfew/heartbeat-check-server:latest .
 
 # 启动容器
 docker run -d \
--p 7777:7777 \
+-p 9000:9000 \
 -e HEARTBEAT_TIMEOUT=70 \
 -e API_KEY='' \
 -e SERVER_NAME='服务器' \

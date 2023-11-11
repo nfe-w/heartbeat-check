@@ -16,6 +16,6 @@ ENV SERVER_NAME 'NAS'
 # Webhook URL
 ENV WEBHOOK_URL 'https://api.day.app/your_token/'
 
-EXPOSE 7777
+EXPOSE 9000
 
 ENTRYPOINT ["./entrypoint.sh"]

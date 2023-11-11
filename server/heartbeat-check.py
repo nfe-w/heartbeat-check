@@ -20,7 +20,7 @@ with open('config.json', 'r') as config_file:
     config_data = json.load(config_file)
 
 # 服务端口
-port = config_data.get('port', 7777)
+port = config_data.get('port', 9000)
 custom_print(f'port->{port}')
 # 心跳超时时间（秒）
 heartbeat_timeout = config_data.get('heartbeat_timeout', 5)
