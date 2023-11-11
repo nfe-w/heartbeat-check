@@ -79,7 +79,7 @@ def heartbeat():
     global last_heartbeat_time
 
     request_key = request.args.get("api_key")
-    if api_key is not None and (request_key is None or request_key != api_key):
+    if api_key is not None and api_key != '' and (request_key is None or request_key != api_key):
         return "Unauthorized", 401
 
     last_heartbeat_time = time.time()

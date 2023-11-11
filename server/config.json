@@ -1,6 +1,0 @@
-{
-  "heartbeat_timeout": 70,
-  "api_key": null,
-  "server_name": "NAS",
-  "webhook_url": "https://api.day.app/your_token/"
-}

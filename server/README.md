@@ -3,5 +3,12 @@
 docker build -t nfew/heartbeat-check-server:latest .
 
 # 启动容器
-docker run -d -p 7777:7777 -v ~/config.json:/mnt/config.json --name heartbeat-check-server nfew/heartbeat-check-server:latest
+docker run -d \
+-p 7777:7777 \
+-e HEARTBEAT_TIMEOUT=70 \
+-e API_KEY='' \
+-e SERVER_NAME='服务器' \
+-e WEBHOOK_URL='https://api.day.app/your_token/' \
+--name heartbeat-check-server \
+nfew/heartbeat-check-server:latest
 ```
