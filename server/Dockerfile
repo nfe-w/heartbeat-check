@@ -1,10 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.9-alpine
 
 WORKDIR /app
 
 COPY . /app/
 
-RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple \
+RUN apk add --no-cache bash \
+    && pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple \
     && chmod +x entrypoint.sh
 
 # 心跳超时时间（秒）
